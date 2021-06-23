@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: event-forwarder
+
+spec:
+  replicas: 1
+
+  template:
+    spec:
+      serviceAccountName: event-forwarder
+
+      containers:
+        - name: server
+          image: event-forwarder
+          imagePullPolicy: IfNotPresent
+
+          securityContext:
+            runAsUser: 65534
+            readOnlyRootFilesystem: true
+
+          envFrom:
+            - configMapRef:
+                name: event-forwarder
+
+          resources:
+            requests:
+              cpu: "0.1"
+              memory: "128Mi"
+            limits:
+              cpu: "1.0"
+              memory: "128Mi"
+
+...
