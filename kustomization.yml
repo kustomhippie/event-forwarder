@@ -10,7 +10,7 @@ commonLabels:
 
 images:
   - name: event-forwarder
-    newName: docker.io/xingse/event-forwarder-gelf
+    newName: xingse/event-forwarder-gelf
     newTag: "v1.1.0"
 
 ...
