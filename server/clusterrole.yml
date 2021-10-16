@@ -4,6 +4,9 @@ kind: ClusterRole
 
 metadata:
   name: event-forwarder
+  labels:
+    app.kubernetes.io/name: event-forwarder
+    app.kubernetes.io/component: server
 
 rules:
   - apiGroups:

@@ -8,11 +8,12 @@ resources:
   - clusterrolebinding.yml
   - deployment.yml
 
-commonLabels:
-  app.kubernetes.io/component: server
-
 configMapGenerator:
   - name: event-forwarder
+    options:
+      labels:
+        app.kubernetes.io/name: event-forwarder
+        app.kubernetes.io/component: server
     literals: []
 
 ...
