@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0](https://github.com/kustomhippie/event-forwarder/compare/v1.0.0...v2.0.0) (2023-07-17)
+
+
+### Features
+
+* **major:** update actionhippie/kustomize action to v2 ([a722457](https://github.com/kustomhippie/event-forwarder/commit/a7224573ecf3fdb4f344e2e6e7e473e6836d1528))
+
 ## 1.0.0 (2023-06-05)
 
 
